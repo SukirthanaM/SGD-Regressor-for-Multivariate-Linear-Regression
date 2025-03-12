@@ -8,10 +8,20 @@ To write a program to predict the price of the house and number of occupants in 
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1. Import 'numpy' for numerical operations, 'pandas' for data manipulation, and various modules from 'sklearn' for machine learning tasks.
+2. Fetch the California housing dataset using 'fetch_california_housing()' and convert it into a pandas DataFrame.
+3. Define the feature set 'x' by dropping the 'AveOccup' and 'HousingPrice' columns from the DataFrame.
+4. Define the target variable 'y' as a DataFrame containing 'AveOccup' and 'HousingPrice'.
+5. Split the dataset into training and testing sets using 'train_test_split()'. The test size is set to 20% of the data.
+6. Initialize 'StandardScaler' for both features and target variables.
+7. Fit the scaler on the training data and transform both the training and testing sets for features ('x_train', 'x_test') and target variables ('y_train',' y_test').
+8. Set the maximum number of iterations and the tolerance for stopping criteria in 'sgd'.
+9. Use 'MultiOutputRegressor' to allow the 'SGDRegressor' to handle multiple target variables (in this case, 'AveOccup' and 'HousingPrice').
+10. Fit the multi-output model on the scaled training data.
+11. Use the trained model to predict the target variables for the scaled test set.
+12. Inverse transform the predicted values and the actual test values to convert them back to their original scale.
+13. Calculate the Mean Squared Error (MSE) between the actual and predicted values to assess the model's performance.
+14. Print the first five predictions to see the output of the model
 
 ## Program:
 ```
