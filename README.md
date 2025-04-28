@@ -42,6 +42,7 @@ from sklearn.preprocessing import StandardScaler
 dataset = fetch_california_housing()
 df=pd.DataFrame(dataset.data,columns=dataset.feature_names)
 df['HousingPrice']=dataset.target
+print("Name: Sukirthana.M\nReg.no: 212224220112")
 print(df.head())
 
 x = df.drop(columns=['AveOccup', 'HousingPrice'])
@@ -76,7 +77,7 @@ print("\nPredictions: \n", y_pred[:5])
 ```
 
 ## Output:
-![Screenshot 2025-03-12 112440](https://github.com/user-attachments/assets/47f9f1e9-3aff-4d6f-a8a9-5fe41922cd71)
+![image](https://github.com/user-attachments/assets/827e0a90-a1db-4caa-895d-a529c2c77e5b)
 ![Screenshot 2025-03-12 112502](https://github.com/user-attachments/assets/0763dcae-fa30-4c78-923c-e21f4b3c5bff)
 
 ## Result:
